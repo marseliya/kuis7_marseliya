@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis7</title>
+    <style>
+
+        img{
+            width: 200px;
+            border-radius: 20px;
+        }
+        div{
+            background-color: rgb(188, 239, 239);
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            flex-wrap: wrap;
+        }
+        button{
+            margin: 3px;
+            border-radius: 5px;
+            background-color: rgb(80, 200, 236);
+        }
+        button:hover{
+            background-color: rgb(12, 169, 218);
+        }
+        h1{
+            font-family: cursive;
+        }
+        h2{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="content">
+        </div>
+        <button>Like</button>
+        <button>comment</button>
+        <button>Beli</button>
+    </main>
+
+    <script>
+        const products =[
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            },
+            {
+                name: "Kursi",
+                image: "https://res.cloudinary.com/ruparupa-com/f_auto,q_auto/v1521754032/Products/X072205_1.jpg",
+                price: "Rp. 100.000",
+                bahan: "kayu",
+                desc: [
+                    "tahan air",
+                    "tahan banting"
+                ]
+            }
+        ] 
+        products.map((product)=> {
+            card(product);
+        });
+        function card(product) {
+        let content = document.querySelector(".content");
+        let figure = document.createElement("figure");
+        let figcaption = document.createElement("figcaption");
+        let img = document.createElement("img");
+        img.src = product.image;
+        let h1 = document.createElement("h1");
+        h1.textContent = product.name;
+        let h2 = document.createElement("h2");
+        h2.textContent = product.price;
+        let ul = document.createElement("ul");
+        product.desc.map((d)=> {
+            let li = document.createElement('li');
+            li.textContent = d;
+            ul.appendChild(li);
+        })
+        let like = document.createElement('button');
+        like.addEventListener("click",()=> alert('anda menyukai produk ini'))
+        like.textContent = "like";
+        let buy = document.createElement('button');
+        buy.addEventListener("click",()=> confirm('anda yakin membeli produk ini?'))
+        buy.textContent = "buy";
+        let comment = document.createElement('button');
+        comment.addEventListener("click",()=> prompt(''))
+        comment.textContent = "comment";
+        figcaption.appendChild(h1);
+        figcaption.appendChild(ul);
+        figcaption.appendChild(h2);
+        figcaption.appendChild(like);
+        figcaption.appendChild(buy);
+        figcaption.appendChild(comment);
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+        content.appendChild(figure);
+}
+        </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <button ondblclick="alert('klik')">Klik 2 kali!</button> 
+    <!-- get elemen by id -->
+    <!-- <div id='myDiv'>Ini adalah elemen div dengan ID 'myDiv'</div> 
+    <script> 
+    let myElement = document.getElementById('myDiv'); 
+    myDiv.textContent = "hj"
+    myDiv.innerHTML `
+    <h1>bal</h1> `
+    </script>  -->
+
+    <!-- get elemen by class name -->
+    <!-- <p class="prgph">Ini adalah paragraf pertama.</p> 
+    <p class="prgph">Ini adalah paragraf kedua.</p> 
+    <script> 
+        let paragraphs = document.getElementsByClassName('prgph'); 
+        paragraphs[0].textContent = "hjk"
+    </script>  -->
+
+    <!-- get elemen by tag name -->
+    <!-- <p>Ini adalah paragraf pertama.</p> 
+    <p>Ini adalah paragraf kedua.</p> 
+    <script> 
+    164 
+    let paragraphs = document.getElementsByTagName('p'); 
+    </script> -->
+
+    <!-- query selector -->
+    <!-- <div class="container"> 
+        <p> 
+        Ini adalah paragraf dalam div dengan  
+        kelas 'container' 
+        </p> 
+        </div> 
+        <script> 
+        let paragraph = document.querySelector('.container p'); 
+        </script> -->
+
+    <!-- query selector all -->
+    <!-- <div class="container"> 
+        <p>Ini adalah paragraf pertama.</p> 
+    </div> 
+    <div class="container"> 
+        <p>Ini adalah paragraf kedua.</p> 
+    </div> 
+ 
+    <script> 
+        var paragraphs = document.querySelectorAll('.container p'); 
+    </script>  -->
+
+    <!-- buat elemen baru -->
+
+    <!-- <div id="container"> 
+    </div> 
+ 
+    <script> 
+        let newParagraph = document.createElement('p'); 
+
+    </script>  -->
+
+    <!-- mengatur isi konten -->
+<!-- <script>
+    let newParagraph = document.createElement('p'); 
+    newParagraph.textContent = 'Ini adalah teks dalam elemen paragraf'; 
+</script> -->
+
+    <!--Menambahkan Elemen Ke Dokumen-->
+
+    <!--<div id="container"> 
+        </div> 
+        <script> 
+        let newParagraph = document.createElement('p'); 
+        newParagraph.textContent = 'Ini adalah teks dalam elemen paragraf.'
+        document.getElementById('container').appendChild(newParagraph); 
+        let container = document.getElementById('container')
+        container.appendChiled(newParagraph)
+    </script>  -->
+
+    <!-- container.remove(); -->
+
+    <!-- menghapus elemen dengan dom -->
+     
+    <!-- <script> 
+        let newParagraph = document.createElement('p'); 
+        newParagraph.textContent = 'Ini adalah teks dalam elemen paragraf'; 
+        document.getElementById('container').appendChild(newParagraph); 
+     
+        newParagraph.remove(); 
+     </script>
+ -->
+
+ <!-- Mengubah Properti -->
+
+    <!-- <script> 
+        let newParagraph = document.createElement('p'); 
+        newParagraph.textContent = 'Ini adalah teks dalam elemen paragraf'; 
+        document.getElementById('container').appendChild(newParagraph); 
+     
+        newParagraph.style.color = 'red; 
+     </script>
+    -->
+
+    <!-- Menambah atau Menghapus Class -->
+
+    <!-- <script> 
+        let newParagraph = document.createElement('p'); 
+        newParagraph.textContent = 'Ini adalah teks dalam elemen paragraf'; 
+        document.getElementById('container').appendChild(newParagraph); 
+        
+        newParagraph.classlist.t.add('highlight'); 
+        newParagraph.classList.remove('highlight'); 
+        newParagraph.classname = 'p1 p2'; 
+
+        // cara remove classname
+        newParagraph.classname = 'p1'; 
+        newParagraph.classname = ''; 
+
+     </script>
+    -->
+
+    <!-- Menggunakan Inline Style -->
+
+
+
+
+<!-- Menggunakan addEventListener() -->
+
+<!-- <button id="myButton">Klik saya!</button> 
+<script> 
+document.getElementById('myButton').addEventListener('click'
+ ,function () { 
+alert('Tombol telah diklik!'); 
+}); 
+</script>  -->
+
+<!-- Menggunakan Atribut -->
+<!-- <button onclick="alert('Tombol telah di klik!')"> 
+    Klik saya!  
+</button>  -->
+
+<!-- MACAM2 EVENT -->
+
+<!-- event klik -->
+<!-- <button onclick="buttonClicked()">Klik saya!</button> 
+<button ondblclick="buttonClicked()">Klik 2 kali!</button> 
+<script> 
+function buttonClicked() { 
+alert('Tombol telah diklik!'); 
+} 
+</script> -->
+
+<!-- event mouse -->
+<!-- <button id="btn-enter">Mouse Enter</button> 
+<button id="btn-hover">Hover</button> 
+<button id="btn-out">Mouse Out</button> 
+
+<script> 
+    const btnEnter = document.getElementById("btn-enter"); 
+    const btnHover = document.getElementById("btn-hover"); 
+    const btnOut = document.getElementById("btn-out"); 
+
+    btnEnter.addEventListener("mouseenter", function (event) { 
+        event.target.innerText = "Mouse sudah masuk"; 
+    }); 
+
+    btnOut.addEventListener("mouseout", function (event) { 
+        event.target.innerText = "Mouse sudah keluar"; 
+    }); 
+
+    btnHover.addEventListener("mouseover", function (event) { 
+        event.target.innerText = "Mouse sudah di atas elemen"; 
+    }); 
+</script> -->
+
+<!-- event keyboard -->
+<!-- <h1 id="keydown">keydown</h1> 
+<h1 id="pressed">pressed</h1> 
+<h1 id="keyup">keyup</h1> 
+
+<script> 
+    const keydown = document.getElementById("keydown"); 
+    const pressed = document.getElementById("pressed"); 
+    const keyup = document.getElementById("keyup"); 
+
+    document.addEventListener("keydown", function (event) { 
+        keydown.innerText = `menekan: ${event.key}`; 
+    }); 
+
+    document.addEventListener("keypress", function (event) { 
+        pressed.innerText = `menahan: ${event.key}`; 
+    }); 
+
+    document.addEventListener("keyup", function (event) { 
+        keyup.innerText = `melepas: ${event.key}`; 
+    }); 
+</script>  -->
+
+<!-- event change -->
+
+<!-- <label for="fruit">Pilih buah favorit:</label> 
+<select id="fruit" onchange="showSelectedFruit()"> 
+    <option value="apple">Apel</option> 
+    <option value="banana">Pisang</option> 
+    <option value="orange">Jeruk</option> 
+</select> 
+
+<script> 
+    function showSelectedFruit() { 
+        let selectedFruit = 
+document.getElementById("fruit").value; 
+        console.log("Buah favorit Kita: " + selectedFruit); 
+    } 
+</script>
+ -->
+
+ <!-- <input type="color">
+ let input = document.querySelector('input');
+ input.addEventListener('change', (e)=>){
+    document.querySelector('body').style.bac = e.target.value
+ } -->
+
+ <!-- event submit -->
+
+ <form onsubmit="return validateForm()"> 
+
+    <label for="username"> 
+        Username 
+        <input type="text" name="username"> 
+    </label> 
+    <label for="password"> 
+        Password 
+        <input type="password" name="password"> 
+    </label> 
+    <input type="submit" value="Submit"> 
+</form> 
+<script> 
+    function validateForm(event) {
+    event.preventDefault() 
+        let username = 
+ document.getElementsByName("username")[0].value; 
+        let password =  
+document.getElementsByName("password")[0].value; 
+// Mencegah pengiriman formulir jika ada masukan yang kosong. 
+        if (username === "" || password === "") { 
+            alert("Isi semua kolom sebelum mengirimkan formulir"); 
+            return false; 
+        } 
+// Lanjutkan pengiriman formulir jika validasi berhasil 
+return true; 
+} 
+</script> -->
+
+</body> 
+</html>
